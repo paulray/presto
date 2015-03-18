@@ -10,13 +10,16 @@ import numpy
 
 define_macros = []
 undef_macros = []
+
 extra_compile_args = ["-DUSEFFTW"]
-include_dirs = []
+extra_link_args = ["-Wl,-framework", "-Wl,Foundation"]
+include_dirs = ["/opt/local/include"]
 
 # Note:  you might need to add "gfortran" to the following list if 
 # you see errors relating to missing "g" functions....
 ppgplot_libraries = ["cpgplot", "pgplot", "X11", "png", "m"]
-ppgplot_library_dirs = ["/usr/X11R6/lib"]
+ppgplot_library_dirs = ["/usr/X11R6/lib","/opt/local/lib"]
+
 
 presto_libraries = ["presto", "fftw3f", "m"]
 presto_library_dirs = []

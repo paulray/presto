@@ -19,6 +19,11 @@ endif
 X11LINK := $(shell pkg-config --libs x11)
 PNGLINK := $(shell pkg-config --libs libpng)
 
+# Other include directories (i.e. glib.h)
+# OTHERINCDIR = -I$(SYSDIR)/include/glib-2.0 -I$(SYSDIR)/lib/glib-2.0/include -I$(SYSDIR)/lib/x86_64-linux-gnu/glib-2.0/include/
+# Other link directories (i.e. libcfitsio if in different location)
+#OTHERLIBDIR = -L/opt/local/lib
+
 # Include and link information for PGPLOT v5.X (including shared libs!)
 # Typically you need to have your PGPLOT_DIR environment variable set
 PGPLOTINC = -I$(PGPLOT_DIR)

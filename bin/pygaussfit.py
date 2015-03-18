@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import matplotlib
 from psr_utils import gaussian_profile, span, read_profile
 from matplotlib.patches import Rectangle
 from bestprof import bestprof

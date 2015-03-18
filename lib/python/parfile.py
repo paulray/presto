@@ -181,6 +181,12 @@ class psr_par:
             setattr(self, 'E', 0.0)
         if hasattr(self, 'T0') and not hasattr(self, 'TASC'):
             setattr(self, 'TASC', self.T0 - self.PB * self.OM/360.0)
+        if hasattr(self, 'PSR') and not hasattr(self, 'NAME'):
+            setattr(self, 'NAME', self.PSR)
+        if hasattr(self, 'PSRJ') and not hasattr(self, 'NAME'):
+            setattr(self, 'NAME', self.PSRJ)
+        if hasattr(self, 'PSRB') and not hasattr(self, 'NAME'):
+            setattr(self, 'NAME', self.PSRB)
         pf.close()
     def __str__(self):
         out = ""
